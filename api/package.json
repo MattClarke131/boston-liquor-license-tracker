@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/codeforboston/boston-liquor-license-tracker/issues"
   },
-  "homepage": "https://github.com/codeforboston/boston-liquor-license-tracker#readme"
+  "homepage": "https://github.com/codeforboston/boston-liquor-license-tracker#readme",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
 }
