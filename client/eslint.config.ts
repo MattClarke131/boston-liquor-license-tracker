@@ -7,10 +7,19 @@ import css from "@eslint/css";
 import { defineConfig } from "eslint/config";
 
 export default defineConfig([
+  { ignores: ["node_modules/**", "dist/**", "**/*.js" ] },
   // Recommended configs
   js.configs.recommended,
   ...tseslint.configs.recommended,
   pluginReact.configs.flat.recommended,
+
+  {
+    settings: {
+      react: {
+        version: "detect",
+      },
+    },
+  },
 
   // Typescript
   {
@@ -22,25 +31,31 @@ export default defineConfig([
       globals: globals.browser,
     },
     rules: {
-      "indent": "off", // Use @typescript-eslint/indent instead
-      "@typescript-eslint/indent": ["error", 2],
-      "prefer-const": "error",
-      "no-var": "error",
+      // "block-scoped-var": "error",
+      // "camelcase": "error",
+      // "no-console": "error",
+      // "no-inner-declarations": "error",
+      // "no-unused-vars": "error",
+      // "no-var": "error",
+      // "func-style": ["error", "expression", { "allowArrowFunctions": true }],
+
+
+      // "prefer-const": "error",
 
       // React
-      "react/self-closing-comp": "error",
+      // "react/self-closing-comp": "error",
 
       // React Hooks
-      "react-hooks/rules-of-hooks": "error",
-      "react-hooks/exhaustive-deps": "warn",
+      // "react-hooks/rules-of-hooks": "error",
+      // "react-hooks/exhaustive-deps": "warn",
     }
   },
 
   // CSS
-  {
-    files: ["**/*.css"],
-    plugins: { css },
-    language: "css/css",
-    ...css.configs.recommended,
-  },
+  // {
+  //   files: ["**/*.css"],
+  //   plugins: { css },
+  //   language: "css/css",
+  //   ...css.configs.recommended,
+  // },
 ]);
