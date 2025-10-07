@@ -12,6 +12,7 @@ const ExtraWorkCard = ({ item }: ExtraWorkCardProps) => {
       <a
         href={item.href}
         target="_blank"
+        rel="noreferrer"
         className={`
                   flex
                   items-end
