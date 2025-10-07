@@ -47,6 +47,7 @@ export default defineConfig([
 
       // React
       // "react/self-closing-comp": "error",
+      "react/no-unescaped-entities": "off",
 
       // React Hooks
       // "react-hooks/rules-of-hooks": "error",
