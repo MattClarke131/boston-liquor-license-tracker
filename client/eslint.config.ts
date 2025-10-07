@@ -8,10 +8,12 @@ import { defineConfig } from "eslint/config";
 
 export default defineConfig([
   { ignores: ["node_modules/**", "dist/**", "**/*.js" ] },
+
   // Recommended configs
   js.configs.recommended,
   ...tseslint.configs.recommended,
   pluginReact.configs.flat.recommended,
+  pluginReact.configs.flat["jsx-runtime"],
 
   {
     settings: {
@@ -26,6 +28,7 @@ export default defineConfig([
     files: ["**/*.{ts,tsx}"],
     plugins: {
       "react-hooks": reactHooks,
+
     },
     languageOptions: {
       globals: globals.browser,
