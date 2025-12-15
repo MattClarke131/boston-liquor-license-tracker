@@ -1,6 +1,9 @@
 import styles from './quote.module.css';
 import { FormattedMessage } from "react-intl";
 
+const unused = null;
+
+
 const Quote = () => {
   return (
     <div className={`${styles.quote}`}>
